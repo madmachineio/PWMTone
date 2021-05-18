@@ -4,6 +4,7 @@ public final class PWMTone {
     let pwm: PWMOut
     var bpm: Float
     var noteGap: Float
+    var fixedHalfStep = 0
 
     var beatDuration: Float {
         60.0 / bpm * 1000.0
@@ -207,6 +208,10 @@ public final class PWMTone {
         self.bpm = Float(bpm)
     }
 
+    public func setFixedHalfStep(_ value: Int) {
+        fixedHalfStep = value
+    }
+
     public func setNoteGap(_ percentage: Float) {
         guard percentage > 0 && percentage < 1.0 else {
             return
@@ -220,7 +225,7 @@ public final class PWMTone {
             return
         }
         let duration  = beatDuration * (4.0 / Float(noteValue))
-        let frequency = frequencyTable[note.rawValue + halfStep]
+        let frequency = frequencyTable[note.rawValue + fixedHalfStep + halfStep]
 
         tone(frequency, duration * (1 - noteGap))
         rest(duration * noteGap)

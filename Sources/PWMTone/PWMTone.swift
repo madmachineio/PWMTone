@@ -229,6 +229,12 @@ public final class PWMTone {
     public func play(note: (Note, Int), halfStep: Int = 0) {
         play(note: note.0, noteValue: note.1, halfStep: halfStep)
     }
+
+    public func play(track: [(Note, Int)], halfStep: Int = 0) {
+        for note in track {
+            play(note: note.0, noteValue: note.1, halfStep: halfStep)
+        }
+    }
 }
 
 extension PWMTone {

@@ -7,9 +7,9 @@ let package = Package(
     name: "Twinkle",
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/madmachineio/SwiftIO.git", .upToNextMajor(from: "0.0.1")),
-        .package(url: "https://github.com/madmachineio/MadBoards.git", .upToNextMajor(from: "0.0.1")),
-        .package(url: "https://github.com/madmachineio/MadDrivers.git", .upToNextMajor(from: "0.0.1")),
+        .package(url: "https://github.com/madmachineio/SwiftIO.git", from: "0.0.1"),
+        .package(url: "https://github.com/madmachineio/MadBoards.git", from: "0.0.1"),
+        .package(url: "https://github.com/madmachineio/MadDrivers.git", from: "0.0.1"),
         .package(path: "../../"),
     ],
     targets: [

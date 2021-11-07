@@ -1,5 +1,5 @@
 import SwiftIO
-import SwiftIOFeather
+import MadBoard
 import PWMTone
 
 var halfStep = 0

@@ -9,7 +9,6 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/madmachineio/SwiftIO.git", from: "0.0.1"),
         .package(url: "https://github.com/madmachineio/MadBoards.git", from: "0.0.1"),
-        .package(url: "https://github.com/madmachineio/MadDrivers.git", from: "0.0.1"),
         .package(path: "../../"),
     ],
     targets: [
@@ -20,7 +19,6 @@ let package = Package(
             dependencies: [
                 "SwiftIO",
                 "MadBoards",
-                "MadDrivers",
                 "PWMTone"]),
         .testTarget(
             name: "TwinkleTests",

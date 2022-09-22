@@ -203,7 +203,6 @@ public final class PWMTone {
         }
 
 
-
         self.pwm = pwm
         self.bpm = Float(bpm)
         self.noteGap = noteGap

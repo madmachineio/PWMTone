@@ -6,6 +6,8 @@ var halfStep = 0
 var bpm = 60
 let player = PWMTone(PWMOut(Id.PWM5A), bpm: bpm)
 
+let newStruct = NewStruct()
+
 while true {
     player.play(track: Music.twinkle)
 

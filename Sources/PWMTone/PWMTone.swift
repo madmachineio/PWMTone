@@ -1,5 +1,9 @@
 import SwiftIO
 
+public struct NewStruct {
+    var x = 0
+}
+
 public final class PWMTone {
     let pwm: PWMOut
     var bpm: Float

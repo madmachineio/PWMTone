@@ -202,7 +202,6 @@ public final class PWMTone {
             fatalError("bpm must be positive")
         }
 
-
         self.pwm = pwm
         self.bpm = Float(bpm)
         self.noteGap = noteGap

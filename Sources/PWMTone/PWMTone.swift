@@ -1,7 +1,10 @@
 import SwiftIO
 
 public struct NewStruct {
-    var x = 0
+    public var x = 0
+    public init(x: Int = 0) {
+	self.x = x
+    }
 }
 
 public final class PWMTone {

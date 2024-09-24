@@ -195,7 +195,8 @@ public final class PWMTone {
 
     public init(_ pwm: PWMOut, bpm: Int = 96, noteGap: Float = 0.1) {
         guard bpm > 0 else {
-            fatalError("bpm must be positive")
+            print("bmp must be positive")
+            fatalError()
         }
 
         self.pwm = pwm

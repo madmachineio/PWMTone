@@ -193,6 +193,8 @@ public final class PWMTone {
         case    rest =  -1
     }
 
+    public typealias Track = [(note: Note, noteValue: Int)]
+
     public init(_ pwm: PWMOut, bpm: Int = 96, noteGap: Float = 0.1) {
         guard bpm > 0 else {
             print("bmp must be positive")
@@ -232,11 +234,11 @@ public final class PWMTone {
         rest(duration * noteGap)
     }
 
-    public func play(note: (Note, Int), halfStep: Int = 0) {
-        play(note: note.0, noteValue: note.1, halfStep: halfStep)
-    }
+    // public func play(note: (Note, Int), halfStep: Int = 0) {
+    //     play(note: note.0, noteValue: note.1, halfStep: halfStep)
+    // }
 
-    public func play(track: [(Note, Int)], halfStep: Int = 0) {
+    public func play(track: Track, halfStep: Int = 0) {
         for note in track {
             play(note: note.0, noteValue: note.1, halfStep: halfStep)
         }

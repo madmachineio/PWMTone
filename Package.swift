@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "PWMTone",
             dependencies: ["SwiftIO"]),
-        .testTarget(
-            name: "PWMToneTests",
-            dependencies: ["PWMTone"]),
     ]
 )

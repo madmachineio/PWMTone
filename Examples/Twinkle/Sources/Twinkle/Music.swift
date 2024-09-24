@@ -1,7 +1,7 @@
 import PWMTone
 
 struct Music {
-    static let twinkle: Track = [
+    static let twinkle: PWMTone.Track = [
         (.C4, 4),
         (.C4, 4),
         (.G4, 4),
